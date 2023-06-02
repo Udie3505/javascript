@@ -28,33 +28,6 @@ else if (environment==="PROD") {
 else  {
   console.log('Enter Valied environment');
 }
-
-document.getElementById("out").innerHTML="The chosen env is "+environment+" and the final amount is "+sendamount;
-let environments ="DEV";
-let send_amounts=100;
-switch (environments) {
-  case "DEV":
-    send_amounts=send_amounts+(send_amounts*0.10);
-    console.log(send_amounts);
-    break;
-  case "TEST":
-    send_amounts=send_amounts+(send_amounts*0.20);
-    console.log(send_amounts);
-    break;
-  case "STAGE":
-    send_amounts=send_amounts+(send_amounts*0.30);
-    console.log(send_amounts);
-    break;
-  case "PROD":
-    send_amounts=send_amounts+(send_amounts*0.5);
-    console.log(send_amounts);
-    break
-
-  default:
-    console.log('Enter Valied environment');
-
-}
-document.getElementById("out1").innerHTML="The chosen env is "+environments+" and the final amount is "+send_amounts;
 </script>
 </body>
 </html>
