@@ -5,25 +5,25 @@
   <p id="out1"> </p>
 <script>
 let environment ="DEV";
-let sendamount=110;
-if (sendamount<100){
-  console.log(sendamount);
+let send_amount=110;
+if (send_amount<100){
+  console.log(send_amount);
 }
 else if (environment==="DEV"){
-  sendamount=sendamount+(sendamount*0.10);
-  console.log(sendamount);
+  send_amount=send_amount+(send_amount*0.10);
+  console.log(send_amount);
 }
 else if (environment==="TEST") {
-  sendamount=sendamount+(sendamount*0.20);
-  console.log(sendamount);
+  send_amount=send_amount+(send_amount*0.20);
+  console.log(send_amount);
 }
 else if (environment==="STAGE") {
-  sendamount=sendamount+(sendamount*0.30);
-  console.log(sendamount);
+  send_amount=send_amount+(send_amount*0.30);
+  console.log(send_amount);
 }
 else if (environment==="PROD") {
-  sendamount=sendamount+(sendamount*0.05);
-  console.log(sendamount);
+  send_amount=send_amount+(send_amount*0.05);
+  console.log(send_amount);
 }
 else  {
   console.log('Enter Valied environment');
@@ -31,30 +31,30 @@ else  {
 
 document.getElementById("out").innerHTML="The chosen env is "+environment+" and the final amount is "+sendamount;
 let environments ="DEV";
-let sendamounts=100;
+let send_amounts=100;
 switch (environments) {
   case "DEV":
-    sendamounts=sendamounts+(sendamounts*0.10);
-    console.log(sendamounts);
+    send_amounts=send_amounts+(send_amounts*0.10);
+    console.log(send_amounts);
     break;
   case "TEST":
-    sendamounts=sendamounts+(sendamounts*0.20);
-    console.log(sendamounts);
+    send_amounts=send_amounts+(send_amounts*0.20);
+    console.log(send_amounts);
     break;
   case "STAGE":
-    sendamounts=sendamounts+(sendamounts*0.30);
-    console.log(sendamounts);
+    send_amounts=send_amounts+(send_amounts*0.30);
+    console.log(send_amounts);
     break;
   case "PROD":
-    sendamounts=sendamounts+(sendamounts*0.5);
-    console.log(sendamounts);
+    send_amounts=send_amounts+(send_amounts*0.5);
+    console.log(send_amounts);
     break
 
   default:
     console.log('Enter Valied environment');
 
 }
-document.getElementById("out1").innerHTML="The chosen env is "+environments+" and the final amount is "+sendamounts;
+document.getElementById("out1").innerHTML="The chosen env is "+environments+" and the final amount is "+send_amounts;
 </script>
 </body>
 </html>
