@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let hobbies = ["watching f1", "cricket", "Cooking", "playing video games", "badminton"];
+
+function getHobbies() {
+  return hobbies;
+}
+
+function addHobby(newHobby) {
+  hobbies.push(newHobby);
+}
+
+function deleteHobby(hobbyToDelete) {
+  const index = hobbies.indexOf(hobbyToDelete);
+  if (index > -1) {
+    hobbies.splice(index, 1);
+  }
+}
+
+// Printing hobbies to the console
+console.log(getHobbies());
+
+// Adding a new hobby
+addHobby("javascripting");
+console.log(getHobbies());
+
+// Deleting a specific hobby
+deleteHobby("cricket");
+console.log(getHobbies());
+
+</script>
+</body>
+</html>
