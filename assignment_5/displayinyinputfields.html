@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Information</title>
+  <script>
+    // It is responsible for retrieving the values entered in the input fields and displaying the profile information in the DOM
+    function displayProfile() {
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var dob = document.getElementById("dob").value;
+      var email = document.getElementById("email").value;
+      var phoneNumber = document.getElementById("phoneNumber").value;
+
+      var profileInfo = "First Name: " + firstName + "<br>"
+                      + "Last Name: " + lastName + "<br>"
+                      + "Date of Birth: " + dob + "<br>"
+                      + "Email: " + email + "<br>"
+                      + "Phone Number: " + phoneNumber;
+
+      document.getElementById("profileDisplay").innerHTML = profileInfo;
+    }
+  </script>
+</head>
+<body>
+  <h2>Profile Information</h2>
+  <form>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required><br><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required><br><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
+
+    <input type="button" value="Submit" onclick="displayProfile()">
+  </form>
+
+  <h2>Profile Details:</h2>
+  <div id="profileDisplay"></div>
+</body>
+</html>
